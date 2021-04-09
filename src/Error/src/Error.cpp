@@ -12,10 +12,10 @@ Seriousness Error::getSeriousness() {
     return (serr);
 }
 
-void Error::setString(std::string error) {
+void Error::setString(std::string &error) {
     err = error;
 }
 
-void Error::setSeriousness(Seriousness seriousness) {
+void Error::setSeriousness(Seriousness &seriousness) {
     serr = seriousness;
 }

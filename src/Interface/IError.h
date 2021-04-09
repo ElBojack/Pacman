@@ -5,7 +5,7 @@
 
 #include <string>
 
-enum Seriousness: int {
+enum Seriousness {
     None = 0,
     Light = 1,
     Moderate = 2,

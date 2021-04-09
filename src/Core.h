@@ -3,18 +3,21 @@
  * 
  */
 
-#include "IWindow.h"
-#include "IError.h"
+//#include "Window.h"
+#include "ErrorHandler.h"
 
 #include <memory>
-
+#include <SFML/Graphics/RenderWindow.hpp>
 class Core {
     public:
         Core();
         ~Core() {};
+        // Must pass the return type as Exit code (e.g: 84)
         void load();
+        void loop();
     protected:
 
     private:
-        std::shared_ptr<IWindow> window; // Init properly by the compiler
+        sf::RenderWindow window;
+        ErrorHandler errHandler;
 };

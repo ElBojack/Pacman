@@ -13,6 +13,23 @@ find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 
 set(SRC
     src/main.cpp
+    src/Core.cpp
+    src/Configuration/src/ConfigurationLoader.cpp
+    src/Error/src/Error.cpp
+    src/Error/src/ErrorHandler.cpp
+    src/UI/src/Button.cpp
+)
+
+set(INCLUDE_DIRECTORIES
+    src/Interface
+    src/Configuration/include
+    src/Error/include
+    src/UI/include
+)
+
+# include directories specification
+include_directories(
+    ${INCLUDE_DIRECTORIES}
 )
 
 # add the executable

@@ -1,2 +1,4 @@
 # Pacman
-Pacman clone using C++ and Qt
+Pacman clone using C++ and SFML
+
+Part of the code is made reusable.
