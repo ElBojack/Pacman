@@ -1,15 +1,23 @@
+#ifndef ERROR_HPP
+#define ERROR_HPP
+
 #include "IError.h"
 
 class Error: public IError {
     public:
-        virtual std::string getString();
-        virtual Seriousness getSeriousness();
-        virtual void setString(std::string&);
-        virtual void setSeriousness(Seriousness&);
+        Error(std::string s, Seriousness ss);
+        Error();
+        virtual ~Error() {};
+        virtual std::string getString() const;
+        virtual Seriousness getSeriousness() const;
 
     protected:
+        void setString(std::string);
+        void setSeriousness(Seriousness);
 
     private:
         std::string err;
         Seriousness serr;
 };
+
+#endif

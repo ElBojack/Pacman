@@ -3,6 +3,9 @@
  * 
  */
 
+#ifndef IERROR_HPP
+#define IERROR_HPP
+
 #include <string>
 
 enum Seriousness {
@@ -20,9 +23,11 @@ enum Seriousness {
 class IError {
     public:
         virtual ~IError() {};
-        virtual std::string getString() = 0;
-        virtual Seriousness getSeriousness() = 0;
+        virtual std::string getString() const = 0;
+        virtual Seriousness getSeriousness() const = 0;
 
-        virtual void setString(std::string) = 0;
-        virtual void setSeriousness(Seriousness) = 0;
+/*         virtual void setString(std::string) = 0;
+        virtual void setSeriousness(Seriousness) = 0; */
 };
+
+#endif

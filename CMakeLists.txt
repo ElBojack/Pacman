@@ -18,6 +18,8 @@ set(SRC
     src/Error/src/Error.cpp
     src/Error/src/ErrorHandler.cpp
     src/UI/src/Button.cpp
+    src/UI/src/Pacman.cpp
+    src/Scene/src/GameScene.cpp
 )
 
 set(INCLUDE_DIRECTORIES
@@ -25,6 +27,7 @@ set(INCLUDE_DIRECTORIES
     src/Configuration/include
     src/Error/include
     src/UI/include
+    src/Scene/include
 )
 
 # include directories specification

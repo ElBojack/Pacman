@@ -2,6 +2,9 @@
  * 
  */
 
+#ifndef ERRORHANDLER_HPP
+#define ERRORHANDLER_HPP
+
 #include "IError.h"
 
 #include <deque>
@@ -30,3 +33,5 @@ class ErrorHandler {
         size_t length;
         std::deque<std::shared_ptr<IError>> errs;
 };
+
+#endif

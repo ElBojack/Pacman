@@ -22,6 +22,9 @@ Button::Button(std::string s, sf::Font &f, sf::Vector2f p /* top left position *
     BgBorder = sf::Color(149, 165, 166);
     borderThickness = 1.f;
 
+    hide = false;
+    disable = false;
+
     // Set size according to text size
     text.setFont(font);
     text.setOrigin(text.getGlobalBounds().width / 2,text.getGlobalBounds().height / 2);
@@ -58,6 +61,9 @@ void Button::update(sf::Event &event, sf::RenderWindow &window) {
                     && mousePosition.y >= shape.getPosition().y - shape.getGlobalBounds().height/2
                     && mousePosition.y <= shape.getPosition().y + shape.getGlobalBounds().height/2;
 
+    /**
+     * Style settings 
+     **/
     if (event.type == sf::Event::EventType::MouseMoved) {
         if (isOnButton) {
             state = state::hovered;
@@ -123,10 +129,21 @@ void Button::update(sf::Event &event, sf::RenderWindow &window) {
     default:
         break;
     }
+
+    /**
+     *  Action to do onClick
+     **/
+}
+
+// Getter
+sf::Uint32 Button::getState() const {
+    return (state);
 }
 
 // private
 void Button::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+    if (hide)
+        return;
     target.draw(shape);
     target.draw(text);
 }

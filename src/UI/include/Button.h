@@ -1,3 +1,6 @@
+#ifndef BUTTON_HPP
+#define BUTTON_HPP
+
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -20,7 +23,7 @@ class Button: public sf::Drawable {
         // Setter
 
         // Getter
-
+        sf::Uint32 getState() const;
         // Other
         void update(sf::Event &, sf::RenderWindow &);
 
@@ -51,4 +54,8 @@ class Button: public sf::Drawable {
 
         //Other
         float borderThickness;
+        float hide;
+        float disable;
 };
+
+#endif

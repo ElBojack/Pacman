@@ -2,6 +2,9 @@
  * Interface for Window
  */
 
+#ifndef IWINDOW_HPP
+#define IWINDOW_HPP
+
 #include <string>
 
 class IWindow {
@@ -14,3 +17,5 @@ class IWindow {
         virtual void open() = 0;
         virtual void close() = 0;
 };
+
+#endif

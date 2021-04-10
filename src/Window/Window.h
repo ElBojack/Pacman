@@ -4,6 +4,9 @@
  * 09/04/21 Here we use SFML RenderWindow directly throught inheritance
  */
 
+#ifndef WINDOW_HPP
+#define WINDOW_HPP
+
 #include "IWindow.h"
 #include <SFML/Graphics/RenderWindow.hpp>
 
@@ -25,3 +28,5 @@ class Window: /* public IWindow, */ public sf::RenderWindow {
 
     private:
 };
+
+#endif
